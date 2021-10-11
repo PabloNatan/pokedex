@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import * as S from "./styles";
 import Loader from "../Loader";
 import Modal from "../Modal";
@@ -17,7 +21,7 @@ function PokemonCard({ name }) {
     setModalIsOpen(false);
   };
 
-  const getPokemonData = async () => {
+  const getPokemonData = useCallback(async () => {
     try {
       const data = await getPokemonFromApi(name);
       setPokemon(data);
@@ -25,11 +29,11 @@ function PokemonCard({ name }) {
       console.log(e);
     }
     setLoading(false);
-  };
+  }, [name]);
 
   useEffect(() => {
     getPokemonData();
-  }, []);
+  }, [getPokemonData]);
 
   const loader = (
     <S.LoadContainer>

@@ -33,8 +33,6 @@ function SearchBox() {
     setPokemon(null);
   };
 
-  console.log(hasError);
-
   const handleTextChange = (e) => {
     if (hasError) {
       setHasError(false);
@@ -44,13 +42,10 @@ function SearchBox() {
 
   const getPokemonData = async (name) => {
     try {
-      console.log(name);
       const data = await getPokemonFromApi(name);
       setPokemon(data);
       setModalIsOpen(true);
     } catch (e) {
-      console.log(e);
-      console.log("tentativa");
       setHasError(true);
     }
     setLoading(false);

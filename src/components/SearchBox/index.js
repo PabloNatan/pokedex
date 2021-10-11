@@ -9,7 +9,7 @@ function SearchBox() {
   const [showPlaceholder, setShowPlaceHolder] =
     useState(true);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [pokemon, setPokemon] = useState("");
+  const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(false);
   const [text, setText] = useState(null);
   const [hasError, setHasError] = useState(false);
@@ -30,7 +30,10 @@ function SearchBox() {
 
   const closeModal = () => {
     setModalIsOpen(false);
+    setPokemon(null);
   };
+
+  console.log(hasError);
 
   const handleTextChange = (e) => {
     if (hasError) {
@@ -41,11 +44,13 @@ function SearchBox() {
 
   const getPokemonData = async (name) => {
     try {
+      console.log(name);
       const data = await getPokemonFromApi(name);
       setPokemon(data);
       setModalIsOpen(true);
     } catch (e) {
       console.log(e);
+      console.log("tentativa");
       setHasError(true);
     }
     setLoading(false);

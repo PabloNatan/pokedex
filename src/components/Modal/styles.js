@@ -23,13 +23,12 @@ export const Container = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-      width: 100%;
-      height: none;
+      width: 100vw;
       transform: none;
       top: 0;
       right: 0;
-      bottom: 0;
       left: 0;
+      bottom: 0;
       border-radius: 0;
     }
   `}
@@ -82,10 +81,9 @@ export const CardInfo = styled.div`
     padding-top: 60px;
     background-color: white;
     border-radius: ${theme.spacings.md}px;
-    justify-self: flex-end;
-    min-height: 60%;
-    width: calc(100% - 10px);
+
     display: flex;
+
     flex-direction: column;
     align-items: center;
 
@@ -93,6 +91,11 @@ export const CardInfo = styled.div`
       display: flex;
       gap: 10px;
       align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 10px);
+      height: 100%;
     }
   `}
 `;
@@ -116,6 +119,8 @@ export const TagType = styled.div`
 export const Description = styled.div`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.lg}px;
+    width: 100%;
+    align-items: center;
   `}
 `;
 
@@ -123,10 +128,11 @@ export const Characteristics = styled.div`
   ${({ theme }) => css`
     margin: 20px 0;
     height: 60px;
-    min-width: 30vw;
-
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
     div {
-      width: 33.33%;
+      width: 33.3%;
       display: flex;
       height: 100%;
       flex-direction: column;
@@ -164,11 +170,11 @@ export const Characteristics = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-      padding: 20px 0;
-      min-width: 95vw;
+      padding: 20px 10px;
+
       > div {
-        padding-left: ${theme.spacings.md}px;
-        padding-right: ${theme.spacings.md}px;
+        padding-left: ${theme.spacings.sm}px;
+        padding-right: ${theme.spacings.sm}px;
       }
     }
   `}

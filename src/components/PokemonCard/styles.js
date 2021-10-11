@@ -6,6 +6,7 @@ export const Container = styled.div`
     border-radius: ${theme.spacings.md}px;
     max-height: 200px;
     height: 150px;
+    min-height: 150px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;

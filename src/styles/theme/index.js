@@ -33,6 +33,7 @@ export const theme = {
     sm: 6,
     md: 12,
     lg: 24,
+    xg: 30,
   },
   loaderSize: {
     sm: 15,

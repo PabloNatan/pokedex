@@ -5,6 +5,7 @@ import * as S from "./styles";
 import random from "../../assets/random.png";
 import Modal from "../Modal";
 import { getPokemonFromApi } from "../../services";
+/* before*/
 
 function Header() {
   const [randomPokemon, setRandomPokemon] = useState(null);

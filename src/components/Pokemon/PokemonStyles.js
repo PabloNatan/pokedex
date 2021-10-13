@@ -181,6 +181,7 @@ export const Type = styled.p`
 export const SubTitle = styled.h4`
   ${({ theme, type }) => css`
     color: ${theme.colorType[type]};
+    margin: ${theme.spacings.md}px 0;
 
     @media screen and (min-width: 768px) {
       margin: ${theme.spacings.lg}px 0;

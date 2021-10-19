@@ -6,6 +6,7 @@ import heightIcon from "../../assets/height_icon.svg";
 import Loader from "../Loader";
 
 function Modal({ pokemon, closeModal, loading }) {
+  // teste
   return (
     <>
       <S.BackDrop onClick={closeModal} />

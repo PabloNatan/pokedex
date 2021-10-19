@@ -21,15 +21,13 @@ export const theme = {
   },
   colors: {
     gray: "#666666",
-    white: "#fff",
-    blue: "#2774ba",
   },
 
   fontSize: {
     sm: 12,
     md: 14,
-    lg: 20,
-    xg: 26,
+    lg: 24,
+    xg: 32,
   },
   spacings: {
     sm: 6,

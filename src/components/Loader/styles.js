@@ -8,7 +8,7 @@ const spin = keyframes`
         transform: rotate(360deg)
     }
 `;
-// before
+
 export const PokeballStyle = styled.img`
   ${({ theme, size }) => css`
     width: ${theme.loaderSize[size]}px;

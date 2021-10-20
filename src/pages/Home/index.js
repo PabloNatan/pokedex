@@ -11,5 +11,5 @@ function Home() {
     </S.Container>
   );
 }
-
+// REfactoring
 export default Home;
